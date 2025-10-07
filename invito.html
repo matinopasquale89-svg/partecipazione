@@ -10,138 +10,152 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap');
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  box-sizing: border-box;
-}
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+  }
 
-html {
-  background: url('img/sfondo.jpg') center/cover no-repeat fixed;
-}
+  html {
+    position: relative;
+    height: 100%;
+  }
 
-body.invito {
-  font-family: 'Playfair Display', serif;
-  color: #13233b;
-  padding-top: 140px; /* padding superiore desktop */
-  padding-bottom: 40px;
-}
+  /* Sfondo con sfocatura */
+  body.invito::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('img/sfondo.jpg') center/cover no-repeat fixed;
+    filter: blur(6px);
+    z-index: -1;
+    /* per non far scrollare lo sfondo, fissiamo */
+    will-change: transform;
+  }
 
-.content {
-  max-width: 800px;
-  margin: auto;
-  padding: 60px 40px;
-  text-align: center;
-  min-height: 70vh;
-  margin-top: 40px;
-}
-
-h1, h1 span, .intro, .details, .gift, .rsvp {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 72px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #153766;
-}
-
-h1 span {
-  display: block;
-  font-size: 26px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  margin-top: 8px;
-  color: #3e4e66;
-}
-
-.intro, .details, .gift, .rsvp {
-  margin: 30px 0;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.details i, .gift i, .rsvp i {
-  margin-right: 8px;
-  color: #1a4a89;
-}
-
-.gift .iban {
-  font-family: monospace;
-  font-size: 22px;
-  color: #102132;
-  display: block;
-  margin: 5px 0;
-}
-
-.rsvp .deadline {
-  font-size: 22px;
-  font-weight: bold;
-  color: #153766;
-}
-
-.rsvp .whatsapp {
-  font-size: 22px;
-}
-
-a {
-  color: #1a4a89;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-strong {
-  font-weight: bold;
-  color: #153766;
-}
-
-em {
-  font-style: italic;
-}
-
-/* Responsive per smartphone */
-@media (max-width: 600px) {
   body.invito {
-    padding-top: 620px; /* aumentato di altre 5 righe (~180px in più rispetto a 440px) */
+    font-family: 'Playfair Display', serif;
+    color: #13233b;
+    padding-top: 140px; /* padding superiore desktop */
     padding-bottom: 40px;
+    position: relative; /* per stacking */
   }
 
   .content {
-    padding: 20px 16px;
-    min-height: 80vh;
-    margin-top: 60px;
+    max-width: 800px;
+    margin: auto;
+    padding: 60px 40px;
+    text-align: center;
+    min-height: 70vh;
+    margin-top: 40px;
+  }
+
+  h1, h1 span, .intro, .details, .gift, .rsvp {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   h1 {
-    font-size: 64px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 72px;
     margin-top: 20px;
+    margin-bottom: 10px;
+    color: #153766;
   }
 
   h1 span {
+    display: block;
     font-size: 26px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin-top: 8px;
+    color: #3e4e66;
   }
 
   .intro, .details, .gift, .rsvp {
-    font-size: 24px;
+    margin: 30px 0;
+    font-size: 20px;
+    line-height: 1.5;
   }
 
-  .gift .iban,
-  .rsvp .deadline,
+  .details i, .gift i, .rsvp i {
+    margin-right: 8px;
+    color: #1a4a89;
+  }
+
+  .gift .iban {
+    font-family: monospace;
+    font-size: 22px;
+    color: #102132;
+    display: block;
+    margin: 5px 0;
+  }
+
+  .rsvp .deadline {
+    font-size: 22px;
+    font-weight: bold;
+    color: #153766;
+  }
+
   .rsvp .whatsapp {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   a {
-    font-size: 22px;
+    color: #1a4a89;
+    text-decoration: none;
+    font-weight: bold;
   }
-}
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong {
+    font-weight: bold;
+    color: #153766;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  /* Responsive per smartphone */
+  @media (max-width: 600px) {
+    body.invito {
+      padding-top: 800px; /* aumentato di circa 10 righe (~360px in più rispetto a 440px) */
+      padding-bottom: 40px;
+    }
+
+    .content {
+      padding: 20px 16px;
+      min-height: 80vh;
+      margin-top: 60px;
+    }
+
+    h1 {
+      font-size: 64px;
+      margin-top: 20px;
+    }
+
+    h1 span {
+      font-size: 26px;
+    }
+
+    .intro, .details, .gift, .rsvp {
+      font-size: 24px;
+    }
+
+    .gift .iban,
+    .rsvp .deadline,
+    .rsvp .whatsapp {
+      font-size: 26px;
+    }
+
+    a {
+      font-size: 22px;
+    }
+  }
 
 </style>
 
