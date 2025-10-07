@@ -10,132 +10,137 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap');
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
 
-  html {
-    background: url('img/sfondo.jpg') center/cover no-repeat fixed;
-  }
+html {
+  background: url('img/sfondo.jpg') center/cover no-repeat fixed;
+}
 
+body.invito {
+  font-family: 'Playfair Display', serif;
+  color: #13233b;
+  padding-top: 60px; /* aumenta padding superiore */
+  padding-bottom: 40px;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 40px;
+  text-align: center;
+  min-height: 70vh; /* occupa più altezza per spingere più in basso */
+}
+
+h1, h1 span, .intro, .details, .gift, .rsvp {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 72px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #153766;
+}
+
+h1 span {
+  display: block;
+  font-size: 26px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #3e4e66;
+}
+
+.intro, .details, .gift, .rsvp {
+  margin: 30px 0;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.details i, .gift i, .rsvp i {
+  margin-right: 8px;
+  color: #1a4a89;
+}
+
+.gift .iban {
+  font-family: monospace;
+  font-size: 22px;
+  color: #102132;
+  display: block;
+  margin: 5px 0;
+}
+
+.rsvp .deadline {
+  font-size: 22px;
+  font-weight: bold;
+  color: #153766;
+}
+
+.rsvp .whatsapp {
+  font-size: 22px;
+}
+
+a {
+  color: #1a4a89;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: bold;
+  color: #153766;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Responsive per smartphone */
+@media (max-width: 600px) {
   body.invito {
-    font-family: 'Playfair Display', serif;
-    color: #13233b;
-    padding-top: 40px;
+    padding-top: 100px; /* ancora più spazio sopra su mobile */
     padding-bottom: 40px;
   }
 
   .content {
-    max-width: 800px;
-    margin: auto;
-    padding: 60px 40px;
-    text-align: center;
-  }
-
-  h1, h1 span, .intro, .details, .gift, .rsvp {
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 20px 16px;
+    min-height: 80vh; /* più altezza per il contenuto */
   }
 
   h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 72px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    color: #153766;
+    font-size: 64px; /* font più grande */
+    margin-top: 20px;
   }
 
   h1 span {
-    display: block;
     font-size: 26px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    margin-top: 8px;
-    color: #3e4e66;
   }
 
   .intro, .details, .gift, .rsvp {
-    margin: 30px 0;
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 24px; /* testo più grande su mobile */
   }
 
-  .details i, .gift i, .rsvp i {
-    margin-right: 8px;
-    color: #1a4a89;
-  }
-
-  .gift .iban {
-    font-family: monospace;
-    font-size: 22px;
-    color: #102132;
-    display: block;
-    margin: 5px 0;
-  }
-
-  .rsvp .deadline {
-    font-size: 22px;
-    font-weight: bold;
-    color: #153766;
-  }
-
+  .gift .iban,
+  .rsvp .deadline,
   .rsvp .whatsapp {
-    font-size: 22px;
+    font-size: 26px; /* ancora più leggibile */
   }
 
   a {
-    color: #1a4a89;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: 22px;
   }
+}
 
-  a:hover {
-    text-decoration: underline;
-  }
-
-  strong {
-    font-weight: bold;
-    color: #153766;
-  }
-
-  em {
-    font-style: italic;
-  }
-
-  /* ✅ Responsive per smartphone */
-  @media (max-width: 600px) {
-    body.invito {
-      padding: 20px 0;
-    }
-
-    .content {
-      padding: 20px 16px;
-    }
-
-    h1 {
-      font-size: 56px;
-      margin-top: 20px;
-    }
-
-    h1 span {
-      font-size: 22px;
-    }
-
-    .intro, .details, .gift, .rsvp {
-      font-size: 22px;
-    }
-
-    .gift .iban,
-    .rsvp .deadline,
-    .rsvp .whatsapp {
-      font-size: 24px;
-    }
-
-    a {
-      font-size: 20px;
-    }
-  }
 </style>
 
 </head>
