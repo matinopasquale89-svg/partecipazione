@@ -109,21 +109,36 @@
       font-style: italic;
     }
 
-    /* ✅ Responsive migliorato */
+        /* ✅ Responsive migliorato per smartphone */
     @media (max-width: 600px) {
       h1 {
-        font-size: 50px;
-        margin-top: 40px;
+        font-size: 56px;
+        margin-top: 30px;
       }
 
       h1 span {
-        font-size: 18px;
+        font-size: 22px;
       }
 
       .content {
         padding: 30px 20px;
       }
+
+      .intro, .details, .gift, .rsvp {
+        font-size: 20px;
+      }
+
+      .gift .iban,
+      .rsvp .deadline,
+      .rsvp .whatsapp {
+        font-size: 22px;
+      }
+
+      a {
+        font-size: 20px;
+      }
     }
+
   </style>
 </head>
 
