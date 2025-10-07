@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Silvia & Pasquale — Save the Date</title>
 
-  <!-- ✅ Meta tag per WhatsApp / social -->
+  <!-- ✅ Meta tag per WhatsApp / social preview -->
   <meta property="og:title" content="Silvia & Pasquale — Save the Date" />
   <meta property="og:description" content="Clicca per scoprire il nostro invito di nozze ✨" />
   <meta property="og:image" content="https://matinopasquale89-svg.github.io/partecipazione/img/foto.jpg" />
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Font e CSS -->
+  <!-- ✅ Stile -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
@@ -29,10 +29,11 @@
     }
 
     .container {
-      background-color: rgba(255, 255, 255, 0.85);
+      /* ✅ Rimosso sfondo e ombra */
+      background: none;
       padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: none;
     }
 
     .monogram {
@@ -58,7 +59,8 @@
     }
 
     .polaroid img {
-      width: 220px;
+      width: 100%;
+      max-width: 300px;
       height: auto;
       display: block;
     }
@@ -68,6 +70,22 @@
       font-size: 18px;
       font-family: sans-serif;
     }
+
+    /* ✅ Mobile optimization */
+    @media (max-width: 600px) {
+      .polaroid {
+        padding: 8px 8px 20px;
+        transform: rotate(0deg);
+      }
+
+      .monogram {
+        font-size: 48px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -76,7 +94,7 @@
     <!-- Monogramma -->
     <div class="monogram">S & P</div>
 
-    <!-- Foto in stile polaroid, cliccabile -->
+    <!-- Foto in stile polaroid cliccabile -->
     <a href="invito.html" class="polaroid">
       <img src="img/foto.jpg" alt="Silvia e Pasquale">
       <div class="caption">Clicca per vedere l'invito</div>
