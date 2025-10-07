@@ -24,7 +24,7 @@ html {
 body.invito {
   font-family: 'Playfair Display', serif;
   color: #13233b;
-  padding-top: 140px; /* aumentato padding superiore per spostare testo più in basso */
+  padding-top: 140px; /* padding superiore desktop */
   padding-bottom: 40px;
 }
 
@@ -34,7 +34,7 @@ body.invito {
   padding: 60px 40px;
   text-align: center;
   min-height: 70vh;
-  margin-top: 40px; /* nuovo margine superiore per distanziare dal bordo */
+  margin-top: 40px;
 }
 
 h1, h1 span, .intro, .details, .gift, .rsvp {
@@ -109,14 +109,14 @@ em {
 /* Responsive per smartphone */
 @media (max-width: 600px) {
   body.invito {
-    padding-top: 220px; /* aumentato ancora per spostare testo più in basso */
+    padding-top: 620px; /* aumentato di altre 5 righe (~180px in più rispetto a 440px) */
     padding-bottom: 40px;
   }
 
   .content {
     padding: 20px 16px;
     min-height: 80vh;
-    margin-top: 60px; /* aumentato margine superiore */
+    margin-top: 60px;
   }
 
   h1 {
@@ -162,10 +162,10 @@ em {
     <div class="details">
       <p><i class="fa-solid fa-calendar-day"></i> <strong>Martedì 16 Giugno 2026</strong> alle ore <strong>10:30</strong></p>
       <p><i class="fa-solid fa-church"></i> <strong>Basilica Santa Croce</strong><br>
-        <a href="https://maps.app.goo.gl/qqVv553qjf8HgetAA" target="_blank">Visualizza su Google Maps</a>
+        <a href="https://maps.app.goo.gl/qqVv553qjf8HgetAA" target="_blank" rel="noopener noreferrer">Visualizza su Google Maps</a>
       </p>
       <p><i class="fa-solid fa-champagne-glasses"></i> <strong>Royal Vesuvio</strong><br>
-        <a href="https://maps.app.goo.gl/GnvfibQFxvB2R2Xo7" target="_blank">Scopri la location</a>
+        <a href="https://maps.app.goo.gl/GnvfibQFxvB2R2Xo7" target="_blank" rel="noopener noreferrer">Scopri la location</a>
       </p>
     </div>
 
@@ -181,7 +181,7 @@ em {
 
     <div class="rsvp">
       <p class="deadline"><i class="fa-regular fa-calendar-check"></i> Vi preghiamo di confermare la presenza entro il 31 Gennaio 2026</p>
-      <p class="whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/393349259412" target="_blank">+39 334 925 9412</a></p>
+      <p class="whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/393349259412" target="_blank" rel="noopener noreferrer">+39 334 925 9412</a></p>
     </div>
   </div>
 </body>
