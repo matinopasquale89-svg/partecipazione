@@ -2,14 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <title>Partecipazione Silvia & Pasquale</title>
-
-  <!-- ✅ Anteprima WhatsApp (Open Graph) -->
-  <meta property="og:title" content="Silvia & Pasquale — Invito di Nozze" />
-  <meta property="og:description" content="Scopri il nostro invito 💌" />
-  <meta property="og:image" content="https://matinopasquale89-svg.github.io/partecipazione/img/foto.jpg" />
-  <meta property="og:url" content="https://matinopasquale89-svg.github.io/partecipazione/invito.html" />
-  <meta property="og:type" content="website" />
+  <title>Silvia & Pasquale — Invito di Nozze</title>
 
   <!-- ✅ Mobile-friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,11 +13,10 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap');
 
-    /* Reset di base */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html, body {
@@ -32,27 +24,28 @@
       width: 100%;
       font-family: 'Playfair Display', serif;
       color: #13233b;
-      overflow-x: hidden;
       background-color: #ffffff;
+      overflow-x: hidden;
     }
 
-    /* Sfondo sfocato */
-    body.invito::before {
+    /* ✅ Sfondo sfocato fisso */
+    body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: url('img/sfondo.jpg') center/cover no-repeat fixed;
+      background: url('img/sfondo.jpg') center/cover no-repeat;
       filter: blur(6px);
       z-index: -1;
     }
 
-    /* Layout principale */
-    body.invito {
+    /* ✅ Contenuto subito in alto */
+    .wrapper {
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      min-height: 100vh;
-      padding: 2vh 4vw 6vh; /* 🔹 contenuto quasi in alto */
+      padding-top: 3vh;
+      padding-bottom: 6vh;
     }
 
     .content {
@@ -60,13 +53,11 @@
       border-radius: 16px;
       padding: clamp(20px, 3vw, 50px);
       max-width: 800px;
-      width: 100%;
+      width: 90%;
       text-align: center;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      margin-top: 0;
     }
 
-    /* Titolo */
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: clamp(40px, 7vw, 72px);
@@ -79,11 +70,9 @@
       font-size: clamp(18px, 3vw, 26px);
       font-family: 'Playfair Display', serif;
       font-weight: 400;
-      margin-top: 4px;
       color: #3e4e66;
     }
 
-    /* Sezioni di testo */
     .intro, .details, .gift, .rsvp {
       margin: clamp(16px, 3vh, 32px) 0;
       font-size: clamp(17px, 2.5vw, 21px);
@@ -98,21 +87,16 @@
 
     .gift .iban {
       font-family: monospace;
+      display: block;
+      margin: 6px 0;
       font-size: clamp(17px, 2.5vw, 21px);
       color: #102132;
-      display: block;
-      margin: 5px 0;
-      word-wrap: break-word;
+      word-break: break-word;
     }
 
     .rsvp .deadline {
-      font-size: clamp(17px, 2.5vw, 21px);
       font-weight: bold;
       color: #153766;
-    }
-
-    .rsvp .whatsapp {
-      font-size: clamp(17px, 2.5vw, 21px);
     }
 
     a {
@@ -120,57 +104,49 @@
       text-decoration: none;
       font-weight: bold;
     }
-    a:hover { text-decoration: underline; }
 
-    strong { font-weight: bold; color: #153766; }
-    em { font-style: italic; }
-
-    /* 🔹 Ottimizzazione per schermi piccoli */
-    @media (max-height: 600px) {
-      body.invito {
-        padding-top: 1vh; /* ancora più vicino al bordo superiore */
-      }
-      .content {
-        padding: 20px;
-      }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
-<body class="invito">
-  <div class="content">
-    <h1>Silvia & Pasquale<br>
-      <span>Annunciano con gioia il loro matrimonio</span>
-    </h1>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <h1>Silvia & Pasquale<br>
+        <span>Annunciano con gioia il loro matrimonio</span>
+      </h1>
 
-    <div class="intro">
-      Sarà per noi un giorno speciale<br>
-      e desideriamo condividerlo con le persone che amiamo.
-    </div>
+      <div class="intro">
+        Sarà per noi un giorno speciale<br>
+        e desideriamo condividerlo con le persone che amiamo.
+      </div>
 
-    <div class="details">
-      <p><i class="fa-solid fa-calendar-day"></i> <strong>Martedì 16 Giugno 2026</strong> alle ore <strong>10:30</strong></p>
-      <p><i class="fa-solid fa-church"></i> <strong>Basilica Santa Croce</strong><br>
-        <a href="https://maps.app.goo.gl/qqVv553qjf8HgetAA" target="_blank" rel="noopener noreferrer">Visualizza su Google Maps</a>
-      </p>
-      <p><i class="fa-solid fa-champagne-glasses"></i> <strong>Royal Vesuvio</strong><br>
-        <a href="https://maps.app.goo.gl/GnvfibQFxvB2R2Xo7" target="_blank" rel="noopener noreferrer">Scopri la location</a>
-      </p>
-    </div>
+      <div class="details">
+        <p><i class="fa-solid fa-calendar-day"></i> <strong>Martedì 16 Giugno 2026</strong> alle ore <strong>10:30</strong></p>
+        <p><i class="fa-solid fa-church"></i> <strong>Basilica Santa Croce</strong><br>
+          <a href="https://maps.app.goo.gl/qqVv553qjf8HgetAA" target="_blank" rel="noopener noreferrer">Visualizza su Google Maps</a>
+        </p>
+        <p><i class="fa-solid fa-champagne-glasses"></i> <strong>Royal Vesuvio</strong><br>
+          <a href="https://maps.app.goo.gl/GnvfibQFxvB2R2Xo7" target="_blank" rel="noopener noreferrer">Scopri la location</a>
+        </p>
+      </div>
 
-    <div class="gift">
-      <p>La vostra presenza è il dono più gradito.</p>
-      <p>Per chi desidera contribuire al nostro futuro insieme:</p>
-      <p><i class="fa-solid fa-gift"></i> <strong>IBAN:</strong>
-        <span class="iban">IT53T0538753100000003553805</span>
-        Intestato a: <strong>Pasquale Matino e Silvia Fusco</strong><br>
-        Grazie di cuore!
-      </p>
-    </div>
+      <div class="gift">
+        <p>La vostra presenza è il dono più gradito.</p>
+        <p>Per chi desidera contribuire al nostro futuro insieme:</p>
+        <p><i class="fa-solid fa-gift"></i> <strong>IBAN:</strong>
+          <span class="iban">IT53T0538753100000003553805</span>
+          Intestato a: <strong>Pasquale Matino e Silvia Fusco</strong><br>
+          Grazie di cuore!
+        </p>
+      </div>
 
-    <div class="rsvp">
-      <p class="deadline"><i class="fa-regular fa-calendar-check"></i> Vi preghiamo di confermare la presenza entro il 31 Marzo 2026</p>
-      <p class="whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/393349259412" target="_blank" rel="noopener noreferrer">+39 334 925 9412</a></p>
+      <div class="rsvp">
+        <p class="deadline"><i class="fa-regular fa-calendar-check"></i> Vi preghiamo di confermare la presenza entro il 31 Marzo 2026</p>
+        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/393349259412" target="_blank">+39 334 925 9412</a></p>
+      </div>
     </div>
   </div>
 </body>
